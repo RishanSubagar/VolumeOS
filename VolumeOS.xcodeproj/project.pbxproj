@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED43876F2F04885D007EEEAF /* VolumeOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED43876E2F04885D007EEEAF /* VolumeOSApp.swift */; };
+		ED4387712F04885D007EEEAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4387702F04885D007EEEAF /* ContentView.swift */; };
+		ED4387732F04885E007EEEAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4387722F04885E007EEEAF /* Assets.xcassets */; };
+		ED4387762F04885E007EEEAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4387752F04885E007EEEAF /* Preview Assets.xcassets */; };
+		ED4387812F04885E007EEEAF /* VolumeOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4387802F04885E007EEEAF /* VolumeOSTests.swift */; };
+		ED43878B2F04885E007EEEAF /* VolumeOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED43878A2F04885E007EEEAF /* VolumeOSUITests.swift */; };
+		ED43878D2F04885E007EEEAF /* VolumeOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED43878C2F04885E007EEEAF /* VolumeOSUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED43877D2F04885E007EEEAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED4387632F04885D007EEEAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED43876A2F04885D007EEEAF;
+			remoteInfo = VolumeOS;
+		};
+		ED4387872F04885E007EEEAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED4387632F04885D007EEEAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED43876A2F04885D007EEEAF;
+			remoteInfo = VolumeOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ED43876B2F04885D007EEEAF /* VolumeOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VolumeOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED43876E2F04885D007EEEAF /* VolumeOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeOSApp.swift; sourceTree = "<group>"; };
+		ED4387702F04885D007EEEAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ED4387722F04885E007EEEAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED4387752F04885E007EEEAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ED4387772F04885E007EEEAF /* VolumeOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VolumeOS.entitlements; sourceTree = "<group>"; };
+		ED43877C2F04885E007EEEAF /* VolumeOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VolumeOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED4387802F04885E007EEEAF /* VolumeOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeOSTests.swift; sourceTree = "<group>"; };
+		ED4387862F04885E007EEEAF /* VolumeOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VolumeOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED43878A2F04885E007EEEAF /* VolumeOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeOSUITests.swift; sourceTree = "<group>"; };
+		ED43878C2F04885E007EEEAF /* VolumeOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED4387682F04885D007EEEAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED4387792F04885E007EEEAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED4387832F04885E007EEEAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED4387622F04885D007EEEAF = {
+			isa = PBXGroup;
+			children = (
+				ED43876D2F04885D007EEEAF /* VolumeOS */,
+				ED43877F2F04885E007EEEAF /* VolumeOSTests */,
+				ED4387892F04885E007EEEAF /* VolumeOSUITests */,
+				ED43876C2F04885D007EEEAF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED43876C2F04885D007EEEAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED43876B2F04885D007EEEAF /* VolumeOS.app */,
+				ED43877C2F04885E007EEEAF /* VolumeOSTests.xctest */,
+				ED4387862F04885E007EEEAF /* VolumeOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED43876D2F04885D007EEEAF /* VolumeOS */ = {
+			isa = PBXGroup;
+			children = (
+				ED43876E2F04885D007EEEAF /* VolumeOSApp.swift */,
+				ED4387702F04885D007EEEAF /* ContentView.swift */,
+				ED4387722F04885E007EEEAF /* Assets.xcassets */,
+				ED4387772F04885E007EEEAF /* VolumeOS.entitlements */,
+				ED4387742F04885E007EEEAF /* Preview Content */,
+			);
+			path = VolumeOS;
+			sourceTree = "<group>";
+		};
+		ED4387742F04885E007EEEAF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				ED4387752F04885E007EEEAF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ED43877F2F04885E007EEEAF /* VolumeOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED4387802F04885E007EEEAF /* VolumeOSTests.swift */,
+			);
+			path = VolumeOSTests;
+			sourceTree = "<group>";
+		};
+		ED4387892F04885E007EEEAF /* VolumeOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ED43878A2F04885E007EEEAF /* VolumeOSUITests.swift */,
+				ED43878C2F04885E007EEEAF /* VolumeOSUITestsLaunchTests.swift */,
+			);
+			path = VolumeOSUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED43876A2F04885D007EEEAF /* VolumeOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED4387902F04885E007EEEAF /* Build configuration list for PBXNativeTarget "VolumeOS" */;
+			buildPhases = (
+				ED4387672F04885D007EEEAF /* Sources */,
+				ED4387682F04885D007EEEAF /* Frameworks */,
+				ED4387692F04885D007EEEAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VolumeOS;
+			productName = VolumeOS;
+			productReference = ED43876B2F04885D007EEEAF /* VolumeOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED43877B2F04885E007EEEAF /* VolumeOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED4387932F04885E007EEEAF /* Build configuration list for PBXNativeTarget "VolumeOSTests" */;
+			buildPhases = (
+				ED4387782F04885E007EEEAF /* Sources */,
+				ED4387792F04885E007EEEAF /* Frameworks */,
+				ED43877A2F04885E007EEEAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED43877E2F04885E007EEEAF /* PBXTargetDependency */,
+			);
+			name = VolumeOSTests;
+			productName = VolumeOSTests;
+			productReference = ED43877C2F04885E007EEEAF /* VolumeOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ED4387852F04885E007EEEAF /* VolumeOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED4387962F04885E007EEEAF /* Build configuration list for PBXNativeTarget "VolumeOSUITests" */;
+			buildPhases = (
+				ED4387822F04885E007EEEAF /* Sources */,
+				ED4387832F04885E007EEEAF /* Frameworks */,
+				ED4387842F04885E007EEEAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED4387882F04885E007EEEAF /* PBXTargetDependency */,
+			);
+			name = VolumeOSUITests;
+			productName = VolumeOSUITests;
+			productReference = ED4387862F04885E007EEEAF /* VolumeOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED4387632F04885D007EEEAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					ED43876A2F04885D007EEEAF = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					ED43877B2F04885E007EEEAF = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = ED43876A2F04885D007EEEAF;
+					};
+					ED4387852F04885E007EEEAF = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = ED43876A2F04885D007EEEAF;
+					};
+				};
+			};
+			buildConfigurationList = ED4387662F04885D007EEEAF /* Build configuration list for PBXProject "VolumeOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED4387622F04885D007EEEAF;
+			productRefGroup = ED43876C2F04885D007EEEAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED43876A2F04885D007EEEAF /* VolumeOS */,
+				ED43877B2F04885E007EEEAF /* VolumeOSTests */,
+				ED4387852F04885E007EEEAF /* VolumeOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED4387692F04885D007EEEAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED4387762F04885E007EEEAF /* Preview Assets.xcassets in Resources */,
+				ED4387732F04885E007EEEAF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED43877A2F04885E007EEEAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED4387842F04885E007EEEAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED4387672F04885D007EEEAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED4387712F04885D007EEEAF /* ContentView.swift in Sources */,
+				ED43876F2F04885D007EEEAF /* VolumeOSApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED4387782F04885E007EEEAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED4387812F04885E007EEEAF /* VolumeOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED4387822F04885E007EEEAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED43878D2F04885E007EEEAF /* VolumeOSUITestsLaunchTests.swift in Sources */,
+				ED43878B2F04885E007EEEAF /* VolumeOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED43877E2F04885E007EEEAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED43876A2F04885D007EEEAF /* VolumeOS */;
+			targetProxy = ED43877D2F04885E007EEEAF /* PBXContainerItemProxy */;
+		};
+		ED4387882F04885E007EEEAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED43876A2F04885D007EEEAF /* VolumeOS */;
+			targetProxy = ED4387872F04885E007EEEAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		ED43878E2F04885E007EEEAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ED43878F2F04885E007EEEAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		ED4387912F04885E007EEEAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VolumeOS/VolumeOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VolumeOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rishansubagar.VolumeOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		ED4387922F04885E007EEEAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VolumeOS/VolumeOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VolumeOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rishansubagar.VolumeOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		ED4387942F04885E007EEEAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rishansubagar.VolumeOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VolumeOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VolumeOS";
+			};
+			name = Debug;
+		};
+		ED4387952F04885E007EEEAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rishansubagar.VolumeOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VolumeOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VolumeOS";
+			};
+			name = Release;
+		};
+		ED4387972F04885E007EEEAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rishansubagar.VolumeOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = VolumeOS;
+			};
+			name = Debug;
+		};
+		ED4387982F04885E007EEEAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rishansubagar.VolumeOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = VolumeOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED4387662F04885D007EEEAF /* Build configuration list for PBXProject "VolumeOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED43878E2F04885E007EEEAF /* Debug */,
+				ED43878F2F04885E007EEEAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED4387902F04885E007EEEAF /* Build configuration list for PBXNativeTarget "VolumeOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED4387912F04885E007EEEAF /* Debug */,
+				ED4387922F04885E007EEEAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED4387932F04885E007EEEAF /* Build configuration list for PBXNativeTarget "VolumeOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED4387942F04885E007EEEAF /* Debug */,
+				ED4387952F04885E007EEEAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED4387962F04885E007EEEAF /* Build configuration list for PBXNativeTarget "VolumeOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED4387972F04885E007EEEAF /* Debug */,
+				ED4387982F04885E007EEEAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED4387632F04885D007EEEAF /* Project object */;
+}
