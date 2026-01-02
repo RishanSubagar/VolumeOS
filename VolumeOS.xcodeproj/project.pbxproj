@@ -22,11 +22,14 @@
 		ED4387B12F04C3C1007EEEAF /* AudioDriverConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4387B02F04C3C1007EEEAF /* AudioDriverConfiguration.swift */; };
 		ED4387B32F04CF6C007EEEAF /* AudioMixerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4387B22F04CF6C007EEEAF /* AudioMixerError.swift */; };
 		ED4387B52F04D09E007EEEAF /* AudioMixerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4387B42F04D09E007EEEAF /* AudioMixerEvent.swift */; };
-		ED4387B92F07247A007EEEAF /* AudioSessionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4387B82F07247A007EEEAF /* AudioSessionsService.swift */; };
-		ED4387BB2F072B07007EEEAF /* VolumeControlService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4387BA2F072B07007EEEAF /* VolumeControlService.swift */; };
-		ED4387BD2F074681007EEEAF /* AudioDeviceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4387BC2F074681007EEEAF /* AudioDeviceService.swift */; };
-		ED4387BF2F074FC5007EEEAF /* 1DuckingDetectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4387BE2F074FC5007EEEAF /* 1DuckingDetectionService.swift */; };
-		ED4387C12F074FCF007EEEAF /* DuckingDetectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4387C02F074FCF007EEEAF /* DuckingDetectionService.swift */; };
+		ED4387D32F075882007EEEAF /* AudioDeviceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4387CA2F075882007EEEAF /* AudioDeviceService.swift */; };
+		ED4387D42F075882007EEEAF /* AudioDriverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4387CB2F075882007EEEAF /* AudioDriverService.swift */; };
+		ED4387D52F075882007EEEAF /* AudioProcessingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4387CC2F075882007EEEAF /* AudioProcessingService.swift */; };
+		ED4387D62F075882007EEEAF /* AudioSessionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4387CD2F075882007EEEAF /* AudioSessionsService.swift */; };
+		ED4387D72F075882007EEEAF /* ConfigurationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4387CE2F075882007EEEAF /* ConfigurationRepository.swift */; };
+		ED4387D82F075882007EEEAF /* DuckingDetectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4387CF2F075882007EEEAF /* DuckingDetectionService.swift */; };
+		ED4387D92F075882007EEEAF /* VolumeControlService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4387D02F075882007EEEAF /* VolumeControlService.swift */; };
+		ED4387DA2F075882007EEEAF /* VolumePreferencesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4387D12F075882007EEEAF /* VolumePreferencesRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,11 +69,14 @@
 		ED4387B02F04C3C1007EEEAF /* AudioDriverConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDriverConfiguration.swift; sourceTree = "<group>"; };
 		ED4387B22F04CF6C007EEEAF /* AudioMixerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMixerError.swift; sourceTree = "<group>"; };
 		ED4387B42F04D09E007EEEAF /* AudioMixerEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMixerEvent.swift; sourceTree = "<group>"; };
-		ED4387B82F07247A007EEEAF /* AudioSessionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSessionsService.swift; sourceTree = "<group>"; };
-		ED4387BA2F072B07007EEEAF /* VolumeControlService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeControlService.swift; sourceTree = "<group>"; };
-		ED4387BC2F074681007EEEAF /* AudioDeviceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDeviceService.swift; sourceTree = "<group>"; };
-		ED4387BE2F074FC5007EEEAF /* 1DuckingDetectionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 1DuckingDetectionService.swift; sourceTree = "<group>"; };
-		ED4387C02F074FCF007EEEAF /* DuckingDetectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuckingDetectionService.swift; sourceTree = "<group>"; };
+		ED4387CA2F075882007EEEAF /* AudioDeviceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioDeviceService.swift; sourceTree = "<group>"; };
+		ED4387CB2F075882007EEEAF /* AudioDriverService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioDriverService.swift; sourceTree = "<group>"; };
+		ED4387CC2F075882007EEEAF /* AudioProcessingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioProcessingService.swift; sourceTree = "<group>"; };
+		ED4387CD2F075882007EEEAF /* AudioSessionsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSessionsService.swift; sourceTree = "<group>"; };
+		ED4387CE2F075882007EEEAF /* ConfigurationRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationRepository.swift; sourceTree = "<group>"; };
+		ED4387CF2F075882007EEEAF /* DuckingDetectionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DuckingDetectionService.swift; sourceTree = "<group>"; };
+		ED4387D02F075882007EEEAF /* VolumeControlService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeControlService.swift; sourceTree = "<group>"; };
+		ED4387D12F075882007EEEAF /* VolumePreferencesRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumePreferencesRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,7 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				ED43879A2F0488E0007EEEAF /* Models */,
-				ED43879B2F0488E6007EEEAF /* Services */,
+				ED4387D22F075882007EEEAF /* Services */,
 				ED43879D2F04891A007EEEAF /* Rpositories */,
 			);
 			path = Domain;
@@ -182,18 +188,6 @@
 				ED4387B42F04D09E007EEEAF /* AudioMixerEvent.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		ED43879B2F0488E6007EEEAF /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				ED4387BE2F074FC5007EEEAF /* 1DuckingDetectionService.swift */,
-				ED4387B82F07247A007EEEAF /* AudioSessionsService.swift */,
-				ED4387BA2F072B07007EEEAF /* VolumeControlService.swift */,
-				ED4387BC2F074681007EEEAF /* AudioDeviceService.swift */,
-				ED4387C02F074FCF007EEEAF /* DuckingDetectionService.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		ED43879D2F04891A007EEEAF /* Rpositories */ = {
@@ -230,6 +224,21 @@
 				ED4387A22F0489F4007EEEAF /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		ED4387D22F075882007EEEAF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ED4387CA2F075882007EEEAF /* AudioDeviceService.swift */,
+				ED4387CB2F075882007EEEAF /* AudioDriverService.swift */,
+				ED4387CC2F075882007EEEAF /* AudioProcessingService.swift */,
+				ED4387CD2F075882007EEEAF /* AudioSessionsService.swift */,
+				ED4387CE2F075882007EEEAF /* ConfigurationRepository.swift */,
+				ED4387CF2F075882007EEEAF /* DuckingDetectionService.swift */,
+				ED4387D02F075882007EEEAF /* VolumeControlService.swift */,
+				ED4387D12F075882007EEEAF /* VolumePreferencesRepository.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,19 +373,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED4387AB2F04A661007EEEAF /* VolumeLevel.swift in Sources */,
-				ED4387C12F074FCF007EEEAF /* DuckingDetectionService.swift in Sources */,
+				ED4387D42F075882007EEEAF /* AudioDriverService.swift in Sources */,
+				ED4387DA2F075882007EEEAF /* VolumePreferencesRepository.swift in Sources */,
+				ED4387D32F075882007EEEAF /* AudioDeviceService.swift in Sources */,
+				ED4387D92F075882007EEEAF /* VolumeControlService.swift in Sources */,
+				ED4387D82F075882007EEEAF /* DuckingDetectionService.swift in Sources */,
+				ED4387D72F075882007EEEAF /* ConfigurationRepository.swift in Sources */,
 				ED4387712F04885D007EEEAF /* ContentView.swift in Sources */,
 				ED4387AD2F04BE2A007EEEAF /* AudioDevice.swift in Sources */,
+				ED4387D62F075882007EEEAF /* AudioSessionsService.swift in Sources */,
 				ED4387AF2F04BF50007EEEAF /* DuckingState.swift in Sources */,
-				ED4387B92F07247A007EEEAF /* AudioSessionsService.swift in Sources */,
+				ED4387D52F075882007EEEAF /* AudioProcessingService.swift in Sources */,
 				ED43876F2F04885D007EEEAF /* VolumeOSApp.swift in Sources */,
-				ED4387BF2F074FC5007EEEAF /* 1DuckingDetectionService.swift in Sources */,
-				ED4387BD2F074681007EEEAF /* AudioDeviceService.swift in Sources */,
 				ED4387B32F04CF6C007EEEAF /* AudioMixerError.swift in Sources */,
 				ED4387A92F04A248007EEEAF /* AudioApplication.swift in Sources */,
 				ED4387B12F04C3C1007EEEAF /* AudioDriverConfiguration.swift in Sources */,
 				ED4387B52F04D09E007EEEAF /* AudioMixerEvent.swift in Sources */,
-				ED4387BB2F072B07007EEEAF /* VolumeControlService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
