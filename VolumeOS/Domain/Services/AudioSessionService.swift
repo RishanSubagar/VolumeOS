@@ -1,5 +1,5 @@
 //
-//  AudioSessionsService.swift
+//  AudioSessionService.swift
 //  VolumeOS
 //
 //  Created by Rishan Subagar on 2026-01-01.
@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 /// Protocol for managing audio sessions and detecting active applications
-protocol AudioSessionsService {
+protocol AudioSessionService {
     /// Publisher that emits events when applications start/stop audio
     var applicationEvents: AnyPublisher<AudioMixerEvent, Never> { get }
     
