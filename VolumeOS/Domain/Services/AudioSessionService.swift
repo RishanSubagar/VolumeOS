@@ -20,7 +20,7 @@ protocol AudioSessionService {
     func getApplication(pid: pid_t) async throws -> AudioApplication
     
     /// Start monitoring for audio session changes
-    func startMonintoring() async throws
+    func startMonitoring() async throws
     
     /// Stop monitoring
     func stopMonitoring()

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ED1EA71C2F0A60A3006E05EE /* AudioDriverCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1EA71A2F0A5F69006E05EE /* AudioDriverCoordinator.swift */; };
+		ED1EA71E2F0A63B7006E05EE /* CoreAudioSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1EA71D2F0A63B7006E05EE /* CoreAudioSessionManager.swift */; };
 		ED43876F2F04885D007EEEAF /* VolumeOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED43876E2F04885D007EEEAF /* VolumeOSApp.swift */; };
 		ED4387712F04885D007EEEAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4387702F04885D007EEEAF /* ContentView.swift */; };
 		ED4387732F04885E007EEEAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4387722F04885E007EEEAF /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		ED1EA71A2F0A5F69006E05EE /* AudioDriverCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDriverCoordinator.swift; sourceTree = "<group>"; };
+		ED1EA71D2F0A63B7006E05EE /* CoreAudioSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAudioSessionManager.swift; sourceTree = "<group>"; };
 		ED43876B2F04885D007EEEAF /* VolumeOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VolumeOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED43876E2F04885D007EEEAF /* VolumeOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeOSApp.swift; sourceTree = "<group>"; };
 		ED4387702F04885D007EEEAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				ED1EA71A2F0A5F69006E05EE /* AudioDriverCoordinator.swift */,
+				ED1EA71D2F0A63B7006E05EE /* CoreAudioSessionManager.swift */,
 			);
 			path = CoreAudio;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED4387AB2F04A661007EEEAF /* VolumeLevel.swift in Sources */,
+				ED1EA71E2F0A63B7006E05EE /* CoreAudioSessionManager.swift in Sources */,
 				ED4387D42F075882007EEEAF /* AudioDriverService.swift in Sources */,
 				ED4387DA2F075882007EEEAF /* VolumePreferencesRepository.swift in Sources */,
 				ED4387D32F075882007EEEAF /* AudioDeviceService.swift in Sources */,

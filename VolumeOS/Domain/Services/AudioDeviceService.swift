@@ -21,7 +21,7 @@ protocol AudioDeviceService {
     func getDefaultOutputDevice() async throws -> AudioDevice
     
     /// Set the default output device
-    func setDefaultAudioDevice(_ device: AudioDevice) async throws
+    func setDefaultOutputDevice(_ device: AudioDevice) async throws
     
     /// Create a virtual audio device
     func createVirtualDevice(configuration: AudioDriverConfiguration) async throws -> AudioDevice
