@@ -171,7 +171,7 @@
 			children = (
 				ED43879A2F0488E0007EEEAF /* Models */,
 				ED4387D22F075882007EEEAF /* Services */,
-				ED43879D2F04891A007EEEAF /* Rpositories */,
+				ED43879D2F04891A007EEEAF /* Repositories */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -190,11 +190,11 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		ED43879D2F04891A007EEEAF /* Rpositories */ = {
+		ED43879D2F04891A007EEEAF /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Rpositories;
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		ED43879E2F048944007EEEAF /* Infrastructure */ = {
