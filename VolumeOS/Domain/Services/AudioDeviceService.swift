@@ -12,7 +12,7 @@ import CoreAudio
 /// Protocol for managing audio devices
 protocol AudioDeviceService {
     /// Publisher that emits device-related events
-    var deviceEventes: AnyPublisher<AudioMixerEvent, Never> { get }
+    var deviceEvents: AnyPublisher<AudioMixerEvent, Never> { get }
     
     /// Get all available audio devices
     func getDevices() async throws -> [AudioDevice]

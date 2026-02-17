@@ -8,7 +8,7 @@
 import Foundation
 
 /// Configuration for the audio driver
-struct AudioDriverConfiguration {
+struct AudioDriverConfiguration: Codable {
     let deviceName: String
     let sampleRate: Double
     let channelCount: UInt32
