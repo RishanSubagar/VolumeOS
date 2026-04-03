@@ -14,7 +14,7 @@ protocol AudioSessionService {
     var applicationEvents: AnyPublisher<AudioMixerEvent, Never> { get }
     
     /// Get all currently active audio applications
-    func getActiveApplication() async throws -> [AudioApplication]
+    func getActiveApplications() async throws -> [AudioApplication]
     
     /// Get information about a specific application
     func getApplication(pid: pid_t) async throws -> AudioApplication

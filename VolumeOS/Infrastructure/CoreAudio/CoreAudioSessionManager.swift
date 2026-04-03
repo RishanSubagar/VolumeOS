@@ -14,7 +14,6 @@ import Combine
 
 final class CoreAudioSessionManager: AudioSessionService {
     private let eventSubject = PassthroughSubject<AudioMixerEvent, Never>()
-    private var propertyListenerQueue: DispatchQueue?
     private var isMonitoring = false
     
     var applicationEvents: AnyPublisher<AudioMixerEvent, Never> {
@@ -24,63 +23,67 @@ final class CoreAudioSessionManager: AudioSessionService {
     func startMonitoring() async throws {
         guard !isMonitoring else { return }
         
-        propertyListenerQueue = DispatchQueue(label: "com.audiomixer.sessionmonitor")
-        
-        // Register for audio session notifications
+        // Register for default output device changes
         registerAudioPropertyListeners()
         
+        // Monitor workspace
+        NSWorkspace.shared.notificationCenter.addObserver(
+            self,
+            selector: #selector(handleAppChange),
+            name: NSWorkspace.didLaunchApplicationNotification,
+            object: nil
+        )
+        NSWorkspace.shared.notificationCenter.addObserver(
+            self,
+            selector: #selector(handleAppChange),
+            name: NSWorkspace.didTerminateApplicationNotification,
+            object: nil
+        )
+
         isMonitoring = true
     }
     
     func stopMonitoring() {
         guard isMonitoring else { return }
-        
         unregisterAudioPropertyListeners()
+        NSWorkspace.shared.notificationCenter.removeObserver(self)
         isMonitoring = false
     }
     
+    @objc private func handleAppChange(notification: Notification) {
+        if let app = notification.userInfo?[NSWorkspace.applicationUserInfoKey] as? NSRunningApplication {
+            if notification.name == NSWorkspace.didLaunchApplicationNotification {
+                Task {
+                    if let audioApp = try? await getApplication(pid: app.processIdentifier) {
+                        eventSubject.send(.applicationStartedAudio(audioApp))
+                    }
+                }
+            } else if notification.name == NSWorkspace.didTerminateApplicationNotification {
+                eventSubject.send(.applicationStoppedAudio(app.processIdentifier))
+            }
+        }
+    }
+
     func getActiveApplications() async throws -> [AudioApplication] {
-        // Query Core Audio for active audio processes
+        let runningApps = NSWorkspace.shared.runningApplications
         var apps: [AudioApplication] = []
         
-        var propSize: UInt32 = 0
-        var address = AudioObjectPropertyAddress(
-            mSelector: kAudioHardwarePropertyProcesses,
-            mScope: kAudioObjectPropertyScopeGlobal,
-            mElement: kAudioObjectPropertyElementMain
-        )
+        // Filtering for applications that likely produce audio
+        // We include specific ones mentioned by the user: Chrome, FaceTime, Discord
+        let audioConfidenceBundles = [
+            "com.google.Chrome",
+            "com.apple.FaceTime",
+            "com.hnc.Discord",
+            "com.apple.Music",
+            "com.spotify.client",
+            "com.apple.Safari"
+        ]
         
-        var status = AudioObjectGetPropertyDataSize(
-            AudioObjectID(kAudioObjectSystemObject),
-            &address,
-            0,
-            nil,
-            &propSize
-        )
-        
-        guard status == noErr else {
-            throw AudioMixerError.deviceNotFound
-        }
-        
-        let processCount = Int(propSize) / MemoryLayout<pid_t>.size
-        var processes = [pid_t](repeating: 0, count: processCount)
-        
-        status = AudioObjectGetPropertyData(
-            AudioObjectID(kAudioObjectSystemObject),
-            &address,
-            0,
-            nil,
-            &propSize,
-            &processes
-        )
-        
-        guard status == noErr else {
-            throw AudioMixerError.deviceNotFound
-        }
-        
-        for pid in processes {
-            if let app = try? await getApplication(pid: pid) {
-                apps.append(app)
+        for app in runningApps {
+            if app.activationPolicy == .regular || audioConfidenceBundles.contains(app.bundleIdentifier ?? "") {
+                if let audioApp = try? await getApplication(pid: app.processIdentifier) {
+                    apps.append(audioApp)
+                }
             }
         }
         
@@ -94,13 +97,11 @@ final class CoreAudioSessionManager: AudioSessionService {
             throw AudioMixerError.applicationNotFound(pid)
         }
         
-        let iconData = app.icon?.tiffRepresentation
-        
         return AudioApplication(
             id: pid,
             name: app.localizedName ?? "Unknown",
             bundleIdentifier: app.bundleIdentifier,
-            iconData: iconData,
+            iconData: app.icon?.tiffRepresentation,
             volume: .default,
             isMuted: false,
             isActive: true
@@ -109,7 +110,7 @@ final class CoreAudioSessionManager: AudioSessionService {
     
     private func registerAudioPropertyListeners() {
         var address = AudioObjectPropertyAddress(
-            mSelector: kAudioHardwarePropertyProcesses,
+            mSelector: kAudioHardwarePropertyDefaultOutputDevice,
             mScope: kAudioObjectPropertyScopeGlobal,
             mElement: kAudioObjectPropertyElementMain
         )
@@ -124,7 +125,7 @@ final class CoreAudioSessionManager: AudioSessionService {
     
     private func unregisterAudioPropertyListeners() {
         var address = AudioObjectPropertyAddress(
-            mSelector: kAudioHardwarePropertyProcesses,
+            mSelector: kAudioHardwarePropertyDefaultOutputDevice,
             mScope: kAudioObjectPropertyScopeGlobal,
             mElement: kAudioObjectPropertyElementMain
         )
@@ -138,10 +139,6 @@ final class CoreAudioSessionManager: AudioSessionService {
     }
 }
 
-// MARK: - C Callbacks
-
-/// C callback for audio property changes
-/// - Note: Must be a free function (not a method) to work with Core Audio C APIs
 private func audioPropertyListener(
     _ inObjectID: AudioObjectID,
     _ inNumberAddresses: UInt32,
@@ -149,12 +146,8 @@ private func audioPropertyListener(
     _ inClientData: UnsafeMutableRawPointer?
 ) -> OSStatus {
     guard let clientData = inClientData else { return noErr }
+    let manager = Unmanaged<CoreAudioSessionManager>.fromOpaque(clientData).takeUnretainedValue()
     
-    let manager = Unmanaged<CoreAudioSessionManager>
-        .fromOpaque(clientData)
-        .takeUnretainedValue()
-    
-    // Notify about audio session changes
     Task {
         if let apps = try? await manager.getActiveApplications() {
             for app in apps {
@@ -162,6 +155,5 @@ private func audioPropertyListener(
             }
         }
     }
-    
     return noErr
 }
