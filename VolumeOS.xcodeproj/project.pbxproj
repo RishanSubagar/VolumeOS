@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F1B6CBC9DD343F3B2B64DCA /* UserDefaultsVolumePreferencesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF897137AB04B438216D020 /* UserDefaultsVolumePreferencesRepository.swift */; };
+		C515EB0548E24EC0A0271B02 /* UserDefaultsConfigurationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A277BC6BC9A04DD7A799CFA5 /* UserDefaultsConfigurationRepository.swift */; };
+		81AE9C6A13E743DCB17CE319 /* DefaultVolumeControlService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF0F7AF8E354421A577EB57 /* DefaultVolumeControlService.swift */; };
+		EC5ABEC685D44D2291C5D3FA /* DefaultDuckingDetectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C01AD781704CA5BBCFE855 /* DefaultDuckingDetectionService.swift */; };
+		703BD56E69954FD58D0B0615 /* DefaultAudioProcessingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A506836070814D3E8AB1CDDD /* DefaultAudioProcessingService.swift */; };
+		FE362896B64B427F84485988 /* CoreAudioDeviceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D2B412AFB741B6A3E186F6 /* CoreAudioDeviceService.swift */; };
+		FCAB9BE90539419D8962093E /* VolumeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DE6D4164024DABA975D589 /* VolumeViewModel.swift */; };
 		ED1EA71C2F0A60A3006E05EE /* AudioDriverCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1EA71A2F0A5F69006E05EE /* AudioDriverCoordinator.swift */; };
 		ED1EA71E2F0A63B7006E05EE /* CoreAudioSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1EA71D2F0A63B7006E05EE /* CoreAudioSessionManager.swift */; };
 		ED43876F2F04885D007EEEAF /* VolumeOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED43876E2F04885D007EEEAF /* VolumeOSApp.swift */; };
@@ -52,6 +59,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CFF897137AB04B438216D020 /* UserDefaultsVolumePreferencesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsVolumePreferencesRepository.swift; sourceTree = "<group>"; };
+		A277BC6BC9A04DD7A799CFA5 /* UserDefaultsConfigurationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsConfigurationRepository.swift; sourceTree = "<group>"; };
+		AEF0F7AF8E354421A577EB57 /* DefaultVolumeControlService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultVolumeControlService.swift; sourceTree = "<group>"; };
+		54C01AD781704CA5BBCFE855 /* DefaultDuckingDetectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDuckingDetectionService.swift; sourceTree = "<group>"; };
+		A506836070814D3E8AB1CDDD /* DefaultAudioProcessingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAudioProcessingService.swift; sourceTree = "<group>"; };
+		48D2B412AFB741B6A3E186F6 /* CoreAudioDeviceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAudioDeviceService.swift; sourceTree = "<group>"; };
+		42DE6D4164024DABA975D589 /* VolumeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeViewModel.swift; sourceTree = "<group>"; };
 		ED1EA71A2F0A5F69006E05EE /* AudioDriverCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDriverCoordinator.swift; sourceTree = "<group>"; };
 		ED1EA71D2F0A63B7006E05EE /* CoreAudioSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAudioSessionManager.swift; sourceTree = "<group>"; };
 		ED43876B2F04885D007EEEAF /* VolumeOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VolumeOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +125,10 @@
 		ED1EA7192F0A5F3D006E05EE /* CoreAudio */ = {
 			isa = PBXGroup;
 			children = (
+				AEF0F7AF8E354421A577EB57 /* DefaultVolumeControlService.swift */,
+				54C01AD781704CA5BBCFE855 /* DefaultDuckingDetectionService.swift */,
+				A506836070814D3E8AB1CDDD /* DefaultAudioProcessingService.swift */,
+				48D2B412AFB741B6A3E186F6 /* CoreAudioDeviceService.swift */,
 				ED1EA71A2F0A5F69006E05EE /* AudioDriverCoordinator.swift */,
 				ED1EA71D2F0A63B7006E05EE /* CoreAudioSessionManager.swift */,
 			);
@@ -213,6 +231,8 @@
 		ED43879E2F048944007EEEAF /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				CFF897137AB04B438216D020 /* UserDefaultsVolumePreferencesRepository.swift */,
+				A277BC6BC9A04DD7A799CFA5 /* UserDefaultsConfigurationRepository.swift */,
 				ED1EA7192F0A5F3D006E05EE /* CoreAudio */,
 			);
 			path = Infrastructure;
@@ -221,6 +241,7 @@
 		ED43879F2F048953007EEEAF /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				42DE6D4164024DABA975D589 /* VolumeViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -386,6 +407,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F1B6CBC9DD343F3B2B64DCA /* UserDefaultsVolumePreferencesRepository.swift in Sources */,
+				C515EB0548E24EC0A0271B02 /* UserDefaultsConfigurationRepository.swift in Sources */,
+				81AE9C6A13E743DCB17CE319 /* DefaultVolumeControlService.swift in Sources */,
+				EC5ABEC685D44D2291C5D3FA /* DefaultDuckingDetectionService.swift in Sources */,
+				703BD56E69954FD58D0B0615 /* DefaultAudioProcessingService.swift in Sources */,
+				FE362896B64B427F84485988 /* CoreAudioDeviceService.swift in Sources */,
+				FCAB9BE90539419D8962093E /* VolumeViewModel.swift in Sources */,
 				ED4387AB2F04A661007EEEAF /* VolumeLevel.swift in Sources */,
 				ED1EA71E2F0A63B7006E05EE /* CoreAudioSessionManager.swift in Sources */,
 				ED4387D42F075882007EEEAF /* AudioDriverService.swift in Sources */,

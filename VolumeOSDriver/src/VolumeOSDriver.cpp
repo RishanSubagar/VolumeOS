@@ -12,6 +12,7 @@ enum {
 };
 
 static std::map<pid_t, float> gAppVolumes;
+static std::map<pid_t, bool> gAppMutes;
 static std::mutex gMutex;
 
 // Forward declarations
@@ -82,6 +83,17 @@ OSStatus VolumeOS_GetPropertyData(AudioServerPlugInDriverRef inDriver, AudioObje
         *(float*)outData = vol;
         *outDataSize = sizeof(float);
         return noErr;
+    } else if (inAddress->mSelector == kVolumeOSPropertyAppMute) {
+        pid_t pid = (pid_t)inAddress->mElement;
+        std::lock_guard<std::mutex> lock(gMutex);
+        bool muted = gAppMutes.count(pid) ? gAppMutes[pid] : false;
+        *(UInt32*)outData = muted ? 1 : 0;
+        *outDataSize = sizeof(UInt32);
+        return noErr;
+    } else if (inAddress->mSelector == kAudioObjectPropertyManufacturer) {
+        *(CFStringRef*)outData = CFSTR("VolumeOS Virtual");
+        *outDataSize = sizeof(CFStringRef);
+        return noErr;
     }
     return kAudioHardwareUnknownPropertyError;
 }
@@ -92,6 +104,12 @@ OSStatus VolumeOS_SetPropertyData(AudioServerPlugInDriverRef inDriver, AudioObje
         float vol = *(float*)inData;
         std::lock_guard<std::mutex> lock(gMutex);
         gAppVolumes[pid] = vol;
+        return noErr;
+    } else if (inAddress->mSelector == kVolumeOSPropertyAppMute) {
+        pid_t pid = (pid_t)inAddress->mElement;
+        UInt32 muted = *(UInt32*)inData;
+        std::lock_guard<std::mutex> lock(gMutex);
+        gAppMutes[pid] = (muted != 0);
         return noErr;
     }
     return kAudioHardwareUnknownPropertyError;

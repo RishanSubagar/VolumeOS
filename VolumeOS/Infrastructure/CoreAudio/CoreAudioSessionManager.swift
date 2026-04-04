@@ -13,8 +13,10 @@ import Combine
 // MARK: - Core Audio Session Manager
 
 final class CoreAudioSessionManager: AudioSessionService {
-    private let eventSubject = PassthroughSubject<AudioMixerEvent, Never>()
+    fileprivate let eventSubject = PassthroughSubject<AudioMixerEvent, Never>()
     private var isMonitoring = false
+    private let knownPIDsLock = NSLock()
+    private var knownPIDs = Set<pid_t>()
     
     var applicationEvents: AnyPublisher<AudioMixerEvent, Never> {
         eventSubject.eraseToAnyPublisher()
@@ -55,10 +57,13 @@ final class CoreAudioSessionManager: AudioSessionService {
             if notification.name == NSWorkspace.didLaunchApplicationNotification {
                 Task {
                     if let audioApp = try? await getApplication(pid: app.processIdentifier) {
-                        eventSubject.send(.applicationStartedAudio(audioApp))
+                        await registerNewApp(audioApp)
                     }
                 }
             } else if notification.name == NSWorkspace.didTerminateApplicationNotification {
+                knownPIDsLock.lock()
+                knownPIDs.remove(app.processIdentifier)
+                knownPIDsLock.unlock()
                 eventSubject.send(.applicationStoppedAudio(app.processIdentifier))
             }
         }
@@ -90,6 +95,15 @@ final class CoreAudioSessionManager: AudioSessionService {
         return apps
     }
     
+    func registerNewApp(_ app: AudioApplication) async {
+        knownPIDsLock.lock()
+        defer { knownPIDsLock.unlock() }
+        if !knownPIDs.contains(app.id) {
+            knownPIDs.insert(app.id)
+            eventSubject.send(.applicationStartedAudio(app))
+        }
+    }
+
     func getApplication(pid: pid_t) async throws -> AudioApplication {
         let runningApps = NSWorkspace.shared.runningApplications
         
@@ -151,7 +165,16 @@ private func audioPropertyListener(
     Task {
         if let apps = try? await manager.getActiveApplications() {
             for app in apps {
-                manager.eventSubject.send(.applicationStartedAudio(app))
+                // Only send event if it's a new application or we want to refresh
+                // For property listener, it's safer to just refresh all if needed,
+                // but let's stick to the plan of only new PIDs.
+                // We need a way to access knownPIDs here if we want to be strict,
+                // or just let the ViewModel handle duplicates (which it already does).
+                // However, the plan says "only emit .applicationStartedAudio for new PIDs".
+                // Since manager is CoreAudioSessionManager, and knownPIDs is private,
+                // we should probably make knownPIDs internal or use a method.
+                // Given the instructions, I'll make handleNewApp internal.
+                await manager.registerNewApp(app)
             }
         }
     }
